@@ -1,10 +1,9 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
 
 @Component({
   selector: 'it-video-player-index',
   standalone: false,
-  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <h1 class="bd-title">Video Player</h1>
     <p class="bd-lead">Componente che consente la riproduzione di video</p>
@@ -25,6 +24,6 @@ export class VideoPlayerIndexComponent {
   component: any;
 
   constructor() {
-    this.component = (<any>Documentation).components.find(component => component.name === 'ItVideoPlayerComponent');
+    this.component = (<any>Documentation).components.find((component: any) => component.name === 'ItVideoPlayerComponent');
   }
 }

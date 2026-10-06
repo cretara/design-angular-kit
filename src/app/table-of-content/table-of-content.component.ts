@@ -1,18 +1,17 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import TableOfContent from '../../assets/table-of-content.json';
 
 @Component({
   selector: 'it-table-of-content',
   templateUrl: './table-of-content.component.html',
   styleUrls: ['./table-of-content.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class TableOfContentComponent {
   tableOfContent = (<any>TableOfContent).tableOfContent;
 
-  public toggle(event, tocItem) {
-    this.tableOfContent = this.tableOfContent.map(item => {
+  public toggle(event: any, tocItem: any) {
+    this.tableOfContent = this.tableOfContent.map((item: any) => {
       const newTocItem = item;
       if (item.label === tocItem.label) {
         newTocItem.active = true;

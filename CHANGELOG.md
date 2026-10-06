@@ -23,6 +23,9 @@
 
 
 
+## 22.2.1 (2026-10-06)
+
+
 ## 21.1.0 (2026-03-05)
 
 * chore: update publiccode ([b0aa36e](https://github.com/italia/design-angular-kit/commit/b0aa36e))
