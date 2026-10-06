@@ -2,9 +2,9 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { IconName } from 'projects/design-angular-kit/src/public_api';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.Eager,
   selector: 'it-chips-group',
   templateUrl: './chips-group.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class ChipsGroupComponent {

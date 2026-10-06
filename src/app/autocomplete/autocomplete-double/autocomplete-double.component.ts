@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.Eager,
   selector: 'it-autocomplete-double',
   templateUrl: './autocomplete-double.component.html',
   styleUrls: ['./autocomplete-double.component.scss'],

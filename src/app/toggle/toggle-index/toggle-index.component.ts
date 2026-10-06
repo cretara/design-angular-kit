@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.Eager,
   selector: 'it-toggle-index',
   templateUrl: './toggle-index.component.html',
   styleUrls: ['./toggle-index.component.scss'],

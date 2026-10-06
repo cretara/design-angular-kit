@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.Eager,
   selector: 'it-list-index',
   templateUrl: './list-index.component.html',
   standalone: false,

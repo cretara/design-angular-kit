@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { SelectControlOption } from 'projects/design-angular-kit/src/public_api';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.Eager,
   selector: 'it-select-example',
   templateUrl: './select-example.component.html',
   styleUrls: ['./select-example.component.scss'],

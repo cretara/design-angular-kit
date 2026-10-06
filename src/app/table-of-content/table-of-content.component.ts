@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import TableOfContent from '../../assets/table-of-content.json';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.Eager,
   selector: 'it-table-of-content',
   templateUrl: './table-of-content.component.html',
   styleUrls: ['./table-of-content.component.scss'],
