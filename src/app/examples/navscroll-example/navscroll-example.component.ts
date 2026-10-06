@@ -15,7 +15,7 @@ const template = `
 
 @Component({
   template,
-  // eslint-disable-next-line @angular-eslint/prefer-standalone
+
   changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })

@@ -8,7 +8,6 @@ import Documentation from '../../../assets/documentation.json';
   standalone: false,
 })
 export class SidebarIndexComponent {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   protected sidebarComponent: any;
 
   constructor() {

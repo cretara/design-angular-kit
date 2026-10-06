@@ -8,7 +8,6 @@ import Documentation from '../../../assets/documentation.json';
   standalone: false,
 })
 export class MegamenuIndexComponent {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   component: any;
 
   constructor() {
