@@ -12,7 +12,6 @@
     "postbuild:lib": "tsc -p projects/design-angular-kit/tsconfig.schematics.json && node postbuildSchematics.js",
     "watch:lib": "ng build --configuration development --watch design-angular-kit",
     "test": "ng test design-angular-kit --browsers=ChromeHeadless --no-watch",
-    "e2e": "npm run compodoc-compile && npm run nunjucks-compile && ng e2e",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "lint:format": "npx prettier --write .",
@@ -25,7 +24,8 @@
     "schematics:test": "ts-node --project projects/design-angular-kit/tsconfig.schematics.json node_modules/jasmine/bin/jasmine projects/design-angular-kit/schematics/**/*.spec.ts"
   },
   "browserslist": [
-    "extends browserslist-config-design-italia"
+    "extends browserslist-config-design-italia",
+    "not samsung 30"
   ],
   "keywords": [
     "angular",
@@ -91,13 +91,13 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^22.2.1",
     "@angular-devkit/core": "^22.2.1",
     "@angular-eslint/builder": "22.5.0",
     "@angular-eslint/eslint-plugin": "22.5.0",
     "@angular-eslint/eslint-plugin-template": "22.5.0",
     "@angular-eslint/schematics": "22.5.0",
     "@angular-eslint/template-parser": "22.5.0",
+    "@angular/build": "^22.2.1",
     "@angular/cli": "^22.2.1",
     "@angular/compiler-cli": "^22.2.1",
     "@angular/language-service": "^22.2.1",
@@ -108,7 +108,6 @@
     "@eslint/js": "^9.39.1",
     "@types/bootstrap": "^5.2.10",
     "@types/jasmine": "~5.1.7",
-    "@types/jasminewd2": "~2.0.13",
     "@types/node": "^22.13.5",
     "@typescript-eslint/eslint-plugin": "^8.71.1",
     "@typescript-eslint/parser": "^8.71.1",
@@ -130,7 +129,6 @@
     "karma": "~6.4.4",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "^2.2.1",
-    "karma-coverage-istanbul-reporter": "~3.0.3",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.1.0",
     "lint-staged": "^15.4.3",

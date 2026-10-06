@@ -8,7 +8,6 @@ import { RouterLink } from '@angular/router';
   template: '<ng-template><ng-content></ng-content></ng-template>',
   styleUrls: ['./avatar-dropdown.component.scss'],
   changeDetection: ChangeDetectionStrategy.Eager,
-  imports: [NgTemplateOutlet],
 })
 export class ItAvatarDropdownItemComponent {
   @ViewChild(TemplateRef, { static: true }) _implicitContent!: TemplateRef<any>;
