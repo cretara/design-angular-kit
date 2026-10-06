@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'it-autocomplete-double',
   templateUrl: './autocomplete-double.component.html',
   styleUrls: ['./autocomplete-double.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class AutocompleteDoubleComponent {
@@ -14,7 +15,7 @@ export class AutocompleteDoubleComponent {
     Verdura: ['Carota', 'Zucchina', 'Melanzana', 'Carciofo'],
   };
 
-  selectedCategory: string = null;
+  selectedCategory: string = '';
 
   changeCategory(value: string) {
     this.selectedCategory = value;
@@ -22,7 +23,7 @@ export class AutocompleteDoubleComponent {
 
   source = (query: string, populateResults: (results: string[]) => void) => {
     const results = this.store[this.selectedCategory];
-    const filteredResults = results.filter(result => result.toLowerCase().indexOf(query.toLowerCase()) !== -1);
+    const filteredResults = results.filter(result => result.toLowerCase().includes(query.toLowerCase()));
     populateResults(filteredResults);
   };
 }

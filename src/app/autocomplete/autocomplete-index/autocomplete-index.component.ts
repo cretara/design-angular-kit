@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
 
 @Component({
   selector: 'it-autocomplete-index',
   templateUrl: './autocomplete-index.component.html',
   standalone: false,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./autocomplete-index.component.scss'],
 })
 export class AutocompleteIndexComponent {

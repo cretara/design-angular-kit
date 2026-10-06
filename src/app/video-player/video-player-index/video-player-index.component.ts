@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
 
 @Component({
   selector: 'it-video-player-index',
   standalone: false,
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <h1 class="bd-title">Video Player</h1>
     <p class="bd-lead">Componente che consente la riproduzione di video</p>

@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'it-accordion-nested-example',
   templateUrl: './accordion-nested-example.component.html',
   styleUrls: ['./accordion-nested-example.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class AccordionNestedExampleComponent {
