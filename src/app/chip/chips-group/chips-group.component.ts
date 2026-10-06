@@ -20,7 +20,7 @@ export class ChipsGroupComponent {
   iconGithub: IconName = 'github';
   size: '' | 'lg' = 'lg';
 
-  close(value: string): void {
+  close(value: keyof ChipsGroupComponent['el']): void {
     this.el[value] = false;
   }
 }

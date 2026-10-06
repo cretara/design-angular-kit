@@ -1,17 +1,16 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
 
 @Component({
   selector: 'it-autocomplete-index',
   templateUrl: './autocomplete-index.component.html',
   standalone: false,
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./autocomplete-index.component.scss'],
 })
 export class AutocompleteIndexComponent {
   autocompleteComponent: any;
 
   constructor() {
-    this.autocompleteComponent = (<any>Documentation).components.find(component => component.name === 'ItAutocompleteComponent');
+    this.autocompleteComponent = (<any>Documentation).components.find((component: any) => component.name === 'ItAutocompleteComponent');
   }
 }

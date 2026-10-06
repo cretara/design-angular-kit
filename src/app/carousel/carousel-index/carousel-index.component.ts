@@ -1,10 +1,9 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
 
 @Component({
   selector: 'it-carousel-index',
   templateUrl: './carousel-index.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class CarouselIndexComponent {
@@ -12,7 +11,7 @@ export class CarouselIndexComponent {
   componentItem: any;
 
   constructor() {
-    this.component = (<any>Documentation).components.find(component => component.name === 'ItCarouselComponent');
-    this.componentItem = (<any>Documentation).components.find(component => component.name === 'ItCarouselItemComponent');
+    this.component = (<any>Documentation).components.find((component: any) => component.name === 'ItCarouselComponent');
+    this.componentItem = (<any>Documentation).components.find((component: any) => component.name === 'ItCarouselItemComponent');
   }
 }

@@ -1,17 +1,16 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
 
 @Component({
   selector: 'it-select-index',
   templateUrl: './select-index.component.html',
   styleUrls: ['./select-index.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class SelectIndexComponent {
   component: any;
 
   constructor() {
-    this.component = (<any>Documentation).components.find(component => component.name === 'ItSelectComponent');
+    this.component = (<any>Documentation).components.find((component: any) => component.name === 'ItSelectComponent');
   }
 }

@@ -19,7 +19,7 @@ export class RadioExampleComponent implements OnInit {
 
   link?: string;
 
-  genderFormGroup: FormGroup;
+  genderFormGroup!: FormGroup;
 
   ngOnInit(): void {
     this.genderFormGroup = this._fb.group({

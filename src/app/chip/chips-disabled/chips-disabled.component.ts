@@ -15,7 +15,7 @@ export class ChipsDisabledComponent {
   iconGithub: IconName = 'github';
   size: '' | 'lg' = 'lg';
 
-  close(value: string): void {
+  close(value: keyof ChipsDisabledComponent['el']): void {
     this.el[value] = false;
   }
 }

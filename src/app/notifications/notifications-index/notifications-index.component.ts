@@ -1,9 +1,9 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
+
 @Component({
   selector: 'it-notifications-index',
   templateUrl: './notifications-index.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class NotificationsIndexComponent {
@@ -11,7 +11,7 @@ export class NotificationsIndexComponent {
   service: any;
 
   constructor() {
-    this.component = (<any>Documentation).components.find(component => component.name === 'ItNotificationsComponent');
-    this.service = (<any>Documentation).injectables.find(injectable => injectable.name === 'ItNotificationService');
+    this.component = (<any>Documentation).components.find((component: any) => component.name === 'ItNotificationsComponent');
+    this.service = (<any>Documentation).injectables.find((injectable: any) => injectable.name === 'ItNotificationService');
   }
 }

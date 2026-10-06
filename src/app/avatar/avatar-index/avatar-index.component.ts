@@ -1,11 +1,10 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
 
 @Component({
   selector: 'it-avatar-index',
   templateUrl: './avatar-index.component.html',
   styleUrls: ['./avatar-index.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class AvatarIndexComponent {
@@ -13,7 +12,7 @@ export class AvatarIndexComponent {
   dropdownItem: any;
 
   constructor() {
-    this.directive = (<any>Documentation).directives.find(directive => directive.name === 'ItAvatarDirective');
-    this.dropdownItem = (<any>Documentation).components.find(component => component.name === 'ItAvatarDropDownItemComponent');
+    this.directive = (<any>Documentation).directives.find((directive: any) => directive.name === 'ItAvatarDirective');
+    this.dropdownItem = (<any>Documentation).components.find((component: any) => component.name === 'ItAvatarDropDownItemComponent');
   }
 }

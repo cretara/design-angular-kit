@@ -1,11 +1,10 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
 
 @Component({
   selector: 'it-tabs-index',
   templateUrl: './tabs-index.component.html',
   styleUrls: ['./tabs-index.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class TabsIndexComponent {
@@ -13,7 +12,7 @@ export class TabsIndexComponent {
   tabComponent: any;
 
   constructor() {
-    this.tabGroupComponent = (<any>Documentation).components.find(component => component.name === 'ItTabContainerComponent');
-    this.tabComponent = (<any>Documentation).components.find(component => component.name === 'ItTabItemComponent');
+    this.tabGroupComponent = (<any>Documentation).components.find((component: any) => component.name === 'ItTabContainerComponent');
+    this.tabComponent = (<any>Documentation).components.find((component: any) => component.name === 'ItTabItemComponent');
   }
 }

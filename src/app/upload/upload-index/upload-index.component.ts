@@ -1,10 +1,9 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
 
 @Component({
   selector: 'it-upload-index',
   templateUrl: './upload-index.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class UploadIndexComponent {
@@ -12,7 +11,7 @@ export class UploadIndexComponent {
   dragDropComponent: any;
 
   constructor() {
-    this.fileListComponent = (<any>Documentation).components.find(component => component.name === 'ItUploadFileListComponent');
-    this.dragDropComponent = (<any>Documentation).components.find(component => component.name === 'ItUploadDragDropComponent');
+    this.fileListComponent = (<any>Documentation).components.find((component: any) => component.name === 'ItUploadFileListComponent');
+    this.dragDropComponent = (<any>Documentation).components.find((component: any) => component.name === 'ItUploadDragDropComponent');
   }
 }

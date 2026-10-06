@@ -1,10 +1,9 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import Documentation from '../../../assets/documentation.json';
 
 @Component({
   selector: 'it-icon-index',
   templateUrl: './icon-index.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class IconIndexComponent {
@@ -29,6 +28,6 @@ export class IconIndexComponent {
     '  })';
 
   constructor() {
-    this.component = (<any>Documentation).components.find(component => component.name === 'ItIconComponent');
+    this.component = (<any>Documentation).components.find((component: any) => component.name === 'ItIconComponent');
   }
 }

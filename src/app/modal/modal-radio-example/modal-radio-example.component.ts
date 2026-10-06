@@ -13,7 +13,7 @@ export class ModalRadioExampleComponent {
 
   formGroup: FormGroup;
 
-  @ViewChild('radioModal') radioModal: ItModalComponent;
+  @ViewChild('radioModal') radioModal: ItModalComponent | undefined;
 
   constructor() {
     this.formGroup = this.formBuilder.group({
@@ -22,6 +22,6 @@ export class ModalRadioExampleComponent {
   }
 
   submit(): void {
-    this.radioModal.hide();
+    this.radioModal?.hide();
   }
 }
