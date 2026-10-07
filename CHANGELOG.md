@@ -1,3 +1,21 @@
+## 22.2.1 (2026-10-06)
+
+- upgrade Angular, Angular CLI, ng-packagr and angular-eslint from 21 to 22 (`22.2.x`), and TypeScript to 6
+- migrate every builder from the deprecated Webpack-based `@angular-devkit/build-angular` to `@angular/build`: `application`, `dev-server`, `extract-i18n`, `karma` and `ng-packagr`
+- remove the Protractor e2e project (`e2e/` folder, `e2e` script and `design-angular-kit-bundle-e2e` target), which is deprecated and has no `@angular/build` equivalent
+- drop the `@angular-devkit/build-angular`, `@types/jasminewd2` and `karma-coverage-istanbul-reporter` dependencies and add `@angular/build` explicitly
+- move ESLint to the flat `angular-eslint` presets, since the legacy `plugin:@angular-eslint/*` configs were removed, and use the Angular parser for HTML files in Prettier
+- add explicit type inference in the library and the demo app to fix strict-typing errors such as TS7006
+- fix `CardCtaComponent`, which was standalone by default and could not be declared in `CardModule` (NG6008), by adding `standalone: false`
+- fix the `ItForwardDirective` specs, which never asserted anything, so they now check `scrollIntoView` and `preventDefault` on click
+- remove unused component imports (NG8113) and unused `eslint-disable` directives
+- update dependencies to fix vulnerabilities (28 down to 12): upgrade `@compodoc/compodoc`, `lint-staged`, `prettier-eslint` and `concurrently`, and override `shell-quote`
+- silence known third-party warnings: the Sass deprecations raised by `bootstrap-italia`, the `@xmldom/xmldom` CommonJS notice and the unsupported `samsung 30` browserslist entry
+- upgraded all libraries to fix the `npm audit` findings with high severity (all come from `braces <=3.0.3`)
+- components that explicitly set `ChangeDetectionStrategy.Eager` were left unchanged, so the `prefer-on-push-component-change-detection` lint warnings remain.
+
+
+
 # [21.2.0](https://github.com/italia/design-angular-kit/compare/v21.1.0...v21.2.0) (2026-04-13)
 
 
@@ -21,9 +39,6 @@
 * **navscroll:** add headerAsAccordion mode ([#511](https://github.com/italia/design-angular-kit/issues/511)) ([8ad785d](https://github.com/italia/design-angular-kit/commit/8ad785d172ae33784b5feaa8ed2fd850e914b731))
 * **navscroll:** add input to control navbar visibility on mobile ([f9cd5e0](https://github.com/italia/design-angular-kit/commit/f9cd5e09f7ee6e45042d70f22b3bafaedb115ba5))
 
-
-
-## 22.2.1 (2026-10-06)
 
 
 ## 21.1.0 (2026-03-05)
